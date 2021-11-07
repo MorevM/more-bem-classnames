@@ -5,10 +5,10 @@
   "main": "dist/more-bem-classnames.cjs.min.js",
   "browser": "dist/more-bem-classnames.umd.min.js",
   "module": "dist/more-bem-classnames.esm.js",
-	"author": {
-		"name": "Maxim Morev",
-		"email": "max.seainside@gmail.com"
-	},
+  "author": {
+    "name": "Maxim Morev",
+    "email": "max.seainside@gmail.com"
+  },
   "homepage": "https://github.com/MorevM/more-bem-classnames#readme",
   "repository": {
     "type": "git",
