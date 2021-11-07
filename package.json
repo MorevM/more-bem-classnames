@@ -1,6 +1,6 @@
 {
   "name": "@morev/more-bem-classnames",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple utility for generating classnames according to the BEM methodology.",
   "main": "dist/more-bem-classnames.cjs.min.js",
   "browser": "dist/more-bem-classnames.umd.min.js",
