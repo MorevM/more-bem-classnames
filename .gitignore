@@ -15,7 +15,8 @@ node_modules/
 *.njsproj
 *.sln
 *.sw*
-.vscode
+.vscode/*
+!.vscode/settings.template.json
 
 # Project-specific
 coverage
