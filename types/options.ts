@@ -1,4 +1,4 @@
-export interface ModuleOptions {
+export type ModuleOptions = {
 	/**
 	 * If `true`, then the modifier names and their values will be converted to kebab-case. \
 	 * If `false`, both renders as passed.
@@ -16,7 +16,7 @@ export interface ModuleOptions {
 	 * b(null, { someModifierName: true }) // => block--someModifierName
 	 * b('el', { someModifier: 'longValue' }) // => block__el_someModifier-longValue
 	 */
-	hyphenate?: boolean,
+	hyphenate: boolean;
 
 	/**
 	 * If passed, it renders in front of the block name.
@@ -28,19 +28,19 @@ export interface ModuleOptions {
 	 * b(null) // => b-block
 	 * b('element') // => b-block__element
 	 */
-	namespace?: string,
+	namespace: string;
 
 	/**
 	 * Allows to customize delimiters between significant parts of the BEM declaration (element, modifier, modifier value).
 	 */
-	delimiters?: {
+	delimiters: {
 		/**
 		 * Delimiter between `block` and `element`. \
 		 * This one not recommended to change.
 		 *
 		 * @default '__'
 		 */
-		element?: string,
+		element: string;
 
 		/**
 		 * Delimiter between `element` and `modifier`. \
@@ -48,23 +48,22 @@ export interface ModuleOptions {
 		 *
 		 * @default '_'
 		 */
-		modifier?: string,
+		modifier: string;
 
 		/**
 		 * Delimiter between `modifier name` and `modifier value` (if needed).
 		 *
 		 * @default '_'
 		 */
-		modifierValue?: string,
-	},
-	[key: string]: any,
-}
+		modifierValue: string;
+	};
+};
 
 
-export interface FunctionOptions {
-	block: string,
-	namespace: string,
-	element: string,
-	modifiers: object,
-	mixins: string[],
-}
+export type FunctionOptions = {
+	block: string;
+	namespace: string;
+	element: string;
+	modifiers: object;
+	mixins: string[];
+};

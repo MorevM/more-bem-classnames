@@ -4,8 +4,6 @@
     "module": "ESNext",
     "lib": ["ESNext"],
     "strict": true,
-    "rootDir": "src",
-    "baseUrl": "./",
     "moduleResolution": "node",
 
     "noUnusedLocals": true,
@@ -20,6 +18,5 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "**/__tests__/*"]
+  "exclude": ["node_modules"]
 }

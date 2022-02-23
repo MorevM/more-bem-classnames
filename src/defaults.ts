@@ -1,4 +1,4 @@
-import {ModuleOptions} from '../types';
+import type { ModuleOptions } from '../types';
 
 export const defaultOptions: ModuleOptions = {
 	hyphenate: true,

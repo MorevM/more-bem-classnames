@@ -1,10 +1,13 @@
 {
   "name": "@morev/more-bem-classnames",
-  "version": "1.0.1",
   "description": "Simple utility for generating classnames according to the BEM methodology.",
-  "main": "dist/more-bem-classnames.cjs.min.js",
-  "browser": "dist/more-bem-classnames.umd.min.js",
-  "module": "dist/more-bem-classnames.esm.js",
+  "version": "1.0.1",
+  "private": false,
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "author": {
     "name": "Maxim Morev",
     "email": "max.seainside@gmail.com"
@@ -18,33 +21,35 @@
     "dist",
     "types"
   ],
-  "private": false,
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/"
-  },
+  "main": "dist/more-bem-classnames.min.cjs",
+  "module": "dist/more-bem-classnames.mjs",
+  "browser": "dist/more-bem-classnames.umd.min.js",
   "types": "types",
-  "license": "MIT",
-  "devDependencies": {
-    "@babel/core": "^7.14.8",
-    "@babel/preset-env": "^7.14.8",
-    "@babel/preset-typescript": "^7.14.5",
-    "@morev/eslint-config": "^6.0.2",
-    "@rollup/plugin-typescript": "^8.2.3",
-    "@types/jest": "^26.0.24",
-    "babel-jest": "^27.0.6",
-    "eslint": "^8.9.0",
-    "jest": "^27.0.6",
-    "rollup": "^2.54.0",
-    "rollup-plugin-filesize": "^9.1.1",
-    "rollup-plugin-terser": "^7.0.2",
-    "ts-jest": "^27.0.4",
-    "tslib": "^2.3.0",
-    "typescript": "^4.3.5"
-  },
   "scripts": {
     "vscode-settings": "cp .vscode/settings.template.json .vscode/settings.json",
     "test": "jest",
     "build": "rollup -c"
+  },
+  "dependencies": {
+    "@morev/helpers": "^0.5.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-typescript": "^7.16.7",
+    "@morev/eslint-config": "^6.0.2",
+    "@rollup/plugin-commonjs": "^21.0.2",
+    "@rollup/plugin-node-resolve": "^13.1.3",
+    "@rollup/plugin-typescript": "^8.3.1",
+    "@types/jest": "^27.4.1",
+    "babel-jest": "^27.5.1",
+    "eslint": "^8.9.0",
+    "jest": "^27.5.1",
+    "rollup": "^2.68.0",
+    "rollup-plugin-filesize": "^9.1.2",
+    "rollup-plugin-terser": "^7.0.2",
+    "ts-jest": "^27.1.3",
+    "tslib": "^2.3.1",
+    "typescript": "^4.5.5"
   }
 }

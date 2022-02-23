@@ -1,13 +1,13 @@
-import { FunctionOptions, ModuleOptions } from '../types';
+import { isString, isObject, defaults } from '@morev/helpers';
+import type { FunctionOptions, ModuleOptions } from '../types';
 
-import { isString, isObject, mergeDeep } from './utils';
 import { defaultOptions } from './defaults';
 import bemFn from './bem-fn';
 
-const moreBemClassnames = (userOptions?: ModuleOptions) => {
-	const options = <ModuleOptions>mergeDeep(defaultOptions, userOptions);
+const moreBemClassnames = (userOptions?: Partial<ModuleOptions>) => {
+	const options = defaults(defaultOptions, userOptions ?? {}) as NonNullable<ModuleOptions>;
 
-	return (block: string) => (el?: string|object, ...args: (string|object)[]) => {
+	return (block: string) => (el?: string | object, ...args: Array<string | object>) => {
 		const result: FunctionOptions = {
 			block,
 			namespace: options.namespace,
@@ -16,16 +16,16 @@ const moreBemClassnames = (userOptions?: ModuleOptions) => {
 			mixins: [],
 		};
 
-		isString(el) && (result.element = el as string);
-		isObject(el) && (result.modifiers = el as object);
+		isString(el) && (result.element = el);
+		isObject(el) && (result.modifiers = el);
 
 		args.forEach(arg => {
-			isString(arg) && (result.mixins.push(arg as string));
-			isObject(arg) && (result.modifiers = { ...result.modifiers, ...arg as object });
+			isString(arg) && (result.mixins.push(arg));
+			isObject(arg) && (result.modifiers = { ...result.modifiers, ...arg });
 		});
 
 		return bemFn(result, options);
-	}
-}
+	};
+};
 
 export default moreBemClassnames;
