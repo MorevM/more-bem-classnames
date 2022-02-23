@@ -3,7 +3,6 @@ name: Release
 on:
   push:
     tags: ['v*']
-  workflow_dispatch:
 
 jobs:
   build:
@@ -16,12 +15,15 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '16'
-          cache: 'yarn'
+          cache: yarn
           scope: '@morev'
           registry-url: 'https://registry.npmjs.org'
 
       - name: Install dependencies
         run: yarn install
+
+      - name: Linting
+        run: yarn lint
 
       - name: Testing
         run: yarn test
