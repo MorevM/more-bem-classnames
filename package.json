@@ -1,7 +1,7 @@
 {
   "name": "@morev/more-bem-classnames",
   "description": "Simple utility for generating classnames according to the BEM methodology.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "private": false,
   "license": "MIT",
   "publishConfig": {
@@ -28,11 +28,11 @@
   "scripts": {
     "prepare": "husky install ./.husky",
     "vscode-settings": "cp .vscode/settings.template.json .vscode/settings.json",
-		"release": "release-it --disable-metrics",
-		"lint": "yarn lint:eslint",
-		"lint:fix": "yarn lint:eslint:fix",
-		"lint:eslint": "eslint \"**/*.{js,ts,json,json5,jsonc,yml,yaml}\"",
-		"lint:eslint:fix": "eslint \"**/*.{js,ts,json,json5,jsonc,yml,yaml}\" --fix",
+    "release": "release-it --disable-metrics",
+    "lint": "yarn lint:eslint",
+    "lint:fix": "yarn lint:eslint:fix",
+    "lint:eslint": "eslint \"**/*.{js,ts,json,json5,jsonc,yml,yaml}\"",
+    "lint:eslint:fix": "eslint \"**/*.{js,ts,json,json5,jsonc,yml,yaml}\" --fix",
     "test": "jest",
     "build": "rollup -c"
   },
