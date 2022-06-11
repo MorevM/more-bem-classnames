@@ -1,3 +1,13 @@
+
+
+### [1.0.3](https://github.com/MorevM/more-bem-classnames/compare/v1.0.2...v1.0.3) (2022-06-11)
+
+
+### Chores
+
+* Deps update ([749ce35](https://github.com/MorevM/more-bem-classnames/commit/749ce351b7c18ce37a74b82e7f8123cb651177ea))
+* Relint files ([adaed05](https://github.com/MorevM/more-bem-classnames/commit/adaed058f4b09835a289252ba9a2b71630d33030))
+
 ### [1.0.2](https://github.com/MorevM/more-bem-classnames/compare/v1.0.1...v1.0.2) (2022-02-23)
 
 
@@ -27,4 +37,3 @@
 * Release 1.0.1 ([1b99cbd](https://github.com/MorevM/more-bem-classnames/commit/1b99cbd508c735c537ebfa5b859c18b1346eec37))
 
 ## [1.0.0](https://github.com/MorevM/more-bem-classnames/compare/v1.0.1...v1.0.2) (2021-11-07)
-
