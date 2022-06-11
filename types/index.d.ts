@@ -1,3 +1,4 @@
+/* eslint-disable jsdoc/sort-tags */
 import type { ModuleOptions, FunctionOptions } from './options';
 
 /**

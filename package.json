@@ -1,66 +1,66 @@
 {
-  "name": "@morev/more-bem-classnames",
-  "description": "Simple utility for generating classnames according to the BEM methodology.",
-  "version": "1.0.2",
-  "private": false,
-  "license": "MIT",
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/"
-  },
-  "author": {
-    "name": "Maxim Morev",
-    "email": "max.seainside@gmail.com"
-  },
-  "homepage": "https://github.com/MorevM/more-bem-classnames#readme",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/MorevM/more-bem-classnames"
-  },
-  "files": [
-    "dist",
-    "types"
-  ],
-  "main": "dist/more-bem-classnames.min.cjs",
-  "module": "dist/more-bem-classnames.mjs",
-  "browser": "dist/more-bem-classnames.umd.min.js",
-  "types": "types",
-  "scripts": {
-    "prepare": "husky install ./.husky",
-    "vscode-settings": "cp .vscode/settings.template.json .vscode/settings.json",
-    "release": "release-it --disable-metrics",
-    "lint": "yarn lint:eslint",
-    "lint:fix": "yarn lint:eslint:fix",
-    "lint:eslint": "eslint \"**/*.{js,ts,json,json5,jsonc,yml,yaml}\"",
-    "lint:eslint:fix": "eslint \"**/*.{js,ts,json,json5,jsonc,yml,yaml}\" --fix",
-    "test": "jest",
-    "build": "rollup -c"
-  },
-  "dependencies": {
-    "@morev/helpers": "^0.19.2"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.18.2",
-    "@babel/preset-env": "^7.18.2",
-    "@babel/preset-typescript": "^7.17.12",
-    "@morev/commitlint-config": "^0.1.1",
-    "@morev/eslint-config": "^12.2.0",
-    "@release-it/conventional-changelog": "^5.0.0",
-    "@rollup/plugin-commonjs": "^22.0.0",
-    "@rollup/plugin-node-resolve": "^13.3.0",
-    "@rollup/plugin-typescript": "^8.3.3",
-    "@types/jest": "^28.1.1",
-    "babel-jest": "^28.1.1",
-    "eslint": "^8.17.0",
-    "husky": "^8.0.1",
-    "jest": "^28.1.1",
-    "lint-staged": "^13.0.1",
-    "release-it": "^15.0.0",
-    "rollup": "^2.75.6",
-    "rollup-plugin-filesize": "^9.1.2",
-    "rollup-plugin-terser": "^7.0.2",
-    "ts-jest": "^28.0.4",
-    "tslib": "^2.4.0",
-    "typescript": "^4.7.3"
-  }
+	"name": "@morev/more-bem-classnames",
+	"description": "Simple utility for generating classnames according to the BEM methodology.",
+	"version": "1.0.2",
+	"private": false,
+	"license": "MIT",
+	"publishConfig": {
+		"access": "public",
+		"registry": "https://registry.npmjs.org/"
+	},
+	"author": {
+		"name": "Maxim Morev",
+		"email": "max.seainside@gmail.com"
+	},
+	"homepage": "https://github.com/MorevM/more-bem-classnames#readme",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/MorevM/more-bem-classnames"
+	},
+	"files": [
+		"dist",
+		"types"
+	],
+	"main": "dist/more-bem-classnames.min.cjs",
+	"module": "dist/more-bem-classnames.mjs",
+	"browser": "dist/more-bem-classnames.umd.min.js",
+	"types": "types",
+	"scripts": {
+		"prepare": "husky install ./.husky",
+		"vscode-settings": "cp .vscode/settings.template.json .vscode/settings.json",
+		"release": "release-it --disable-metrics",
+		"lint": "yarn lint:eslint",
+		"lint:fix": "yarn lint:eslint:fix",
+		"lint:eslint": "eslint \"**/*.{js,ts,json,json5,jsonc,yml,yaml}\"",
+		"lint:eslint:fix": "eslint \"**/*.{js,ts,json,json5,jsonc,yml,yaml}\" --fix",
+		"test": "jest",
+		"build": "rollup -c"
+	},
+	"dependencies": {
+		"@morev/helpers": "^0.19.2"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.18.2",
+		"@babel/preset-env": "^7.18.2",
+		"@babel/preset-typescript": "^7.17.12",
+		"@morev/commitlint-config": "^0.1.1",
+		"@morev/eslint-config": "^12.2.0",
+		"@release-it/conventional-changelog": "^5.0.0",
+		"@rollup/plugin-commonjs": "^22.0.0",
+		"@rollup/plugin-node-resolve": "^13.3.0",
+		"@rollup/plugin-typescript": "^8.3.3",
+		"@types/jest": "^28.1.1",
+		"babel-jest": "^28.1.1",
+		"eslint": "^8.17.0",
+		"husky": "^8.0.1",
+		"jest": "^28.1.1",
+		"lint-staged": "^13.0.1",
+		"release-it": "^15.0.0",
+		"rollup": "^2.75.6",
+		"rollup-plugin-filesize": "^9.1.2",
+		"rollup-plugin-terser": "^7.0.2",
+		"ts-jest": "^28.0.4",
+		"tslib": "^2.4.0",
+		"typescript": "^4.7.3"
+	}
 }
