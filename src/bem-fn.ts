@@ -1,4 +1,4 @@
-import { isObject, hyphenate as _hyphenate } from '@morev/helpers';
+import { isObject, kebabCase } from '@morev/helpers';
 import type { FunctionOptions, ModuleOptions } from '../types';
 
 export default function bemFn(
@@ -15,7 +15,7 @@ export default function bemFn(
 
 	const stack = [root];
 
-	const doCase = (str: string) => (hyphenate ? _hyphenate(str.toString()) : str.toString());
+	const doCase = (str: string) => (hyphenate ? kebabCase(str.toString()) : str.toString());
 
 	if (isObject(modifiers)) {
 		Object.entries(modifiers).forEach(([modKey, modValue]) => {
