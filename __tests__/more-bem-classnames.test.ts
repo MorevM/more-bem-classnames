@@ -1,6 +1,6 @@
 /* eslint-disable jest/valid-title */
 /* eslint-disable jest/require-hook */
-import { defaults } from '@morev/helpers';
+import { mergeObjects } from '@morev/helpers';
 import bemClassNames from '../src/more-bem-classnames';
 import { defaultOptions } from '../src/defaults';
 
@@ -111,7 +111,7 @@ const testCasesFactory = (block: CallableFunction, element: string | null, optio
 };
 
 const testsFactory = (name: string, _options?: DeepPartial<ModuleOptions>) => {
-	const options = defaults(defaultOptions, _options ?? {}) as ModuleOptions;
+	const options = mergeObjects(defaultOptions, _options ?? {}) as ModuleOptions;
 	const block = testOptionsFactory(options);
 
 	describe(name, () => {

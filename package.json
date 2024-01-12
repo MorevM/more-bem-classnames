@@ -37,7 +37,7 @@
 		"build": "rollup -c"
 	},
 	"dependencies": {
-		"@morev/helpers": "^0.19.2"
+		"@morev/helpers": "^1.19.2"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.18.2",
