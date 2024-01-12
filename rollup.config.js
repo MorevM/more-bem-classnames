@@ -22,6 +22,7 @@ export default [
 			format: 'umd',
 		},
 		plugins,
+		external: ['@morev/helpers'],
 	},
 	{
 		input: 'src/more-bem-classnames.ts',
@@ -30,5 +31,6 @@ export default [
 			{ file: pkg.main, format: 'cjs', exports: 'default' },
 			{ file: pkg.module, format: 'es', exports: 'default' },
 		],
+		external: ['@morev/helpers'],
 	},
 ];
