@@ -1,3 +1,4 @@
+/* eslint-disable unicorn/prefer-ternary */
 import { isObject, kebabCase } from '@morev/helpers';
 import type { FunctionOptions, ModuleOptions } from '../types';
 
@@ -13,7 +14,7 @@ export default function bemFn(
 		? namespace + block + ds.element + element
 		: namespace + block;
 
-	const stack = [root];
+	let stackString = root;
 
 	const doCase = (str: string) => (hyphenate ? kebabCase(str.toString()) : str.toString());
 
@@ -21,14 +22,14 @@ export default function bemFn(
 		Object.entries(modifiers).forEach(([modKey, modValue]) => {
 			if ([false, null, undefined].includes(modValue as any)) return;
 			if (modValue === true) {
-				stack.push(root + ds.modifier + doCase(modKey));
+				stackString += ` ${root}${ds.modifier}${doCase(modKey)}`;
 			} else {
-				stack.push(root + ds.modifier + doCase(modKey) + ds.modifierValue + doCase(modValue as any));
+				stackString += ` ${root}${ds.modifier}${doCase(modKey)}${ds.modifierValue}${doCase(modValue as any)}`;
 			}
 		});
 	}
 
-	mixins.length && stack.push(mixins.join(' '));
+	mixins.length && (stackString += ` ${mixins.join(' ')}`);
 
-	return stack.join(' ');
+	return stackString;
 }
