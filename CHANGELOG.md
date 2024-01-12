@@ -1,5 +1,22 @@
 
 
+## [2.0.0](https://github.com/MorevM/more-bem-classnames/compare/v1.0.3...v2.0.0) (2024-01-12)
+
+
+### ⚠ BREAKING CHANGES
+
+* As updated `@morev/helpers` package includes `ohash` dependency, an additional transpile step may be required.
+
+### Refactoring
+
+* Prefer string operations over array operations ([2d9dc8b](https://github.com/MorevM/more-bem-classnames/commit/2d9dc8b49ca420cc3c6a3dbc047b9e1dbe63c52e))
+
+
+### Chores
+
+* Mark `@morev/helpers` as an external dependency ([55e0d52](https://github.com/MorevM/more-bem-classnames/commit/55e0d52f249a364b7e39b4bf18e3df745cd32413))
+* Upgrade `@morev/helpers` package to latest ([3970c00](https://github.com/MorevM/more-bem-classnames/commit/3970c00dcf5dcfd774b84c7e6190741e2eb744b3))
+
 ### [1.0.3](https://github.com/MorevM/more-bem-classnames/compare/v1.0.2...v1.0.3) (2022-06-11)
 
 
