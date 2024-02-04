@@ -1,3 +1,12 @@
+# Deprecation notice
+The package is no longer supported. Use [`@morev/bem-classnames`](https://github.com/MorevM/bem-classnames) instead.
+
+---
+
+---
+
+---
+
 # bem-classnames
 
 Simple utility for generating classnames according to the BEM methodology.
